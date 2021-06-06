@@ -1,14 +1,14 @@
 {
   "name": "fylo-two-col-landing-page",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fylo landing page with two column layout challenge for frontend mentor",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
   "keywords": [],
-  "author": "",
+  "author": "Chris M. (habibdev)",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",

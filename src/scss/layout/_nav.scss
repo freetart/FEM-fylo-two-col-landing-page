@@ -1,0 +1,36 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.nav {
+  &__content {
+    @include maxWidthLg;
+    @include sectionSpacing;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 15rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin: 0 2rem;
+  }
+
+  &__link {
+    @include textStyles;
+    color: color(veryDarkBlue);
+    font-size: size(sm);
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
