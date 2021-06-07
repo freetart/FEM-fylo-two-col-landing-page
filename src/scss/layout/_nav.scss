@@ -2,6 +2,10 @@
 @use "../abstracts/abstracts" as *;
 
 .nav {
+  @include responsive(lg) {
+    display: none;
+  }
+
   &__content {
     @include maxWidthLg;
     @include sectionSpacing;

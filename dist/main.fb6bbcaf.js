@@ -137,6 +137,30 @@ var preloader = function preloader() {
 
 var _default = preloader;
 exports.default = _default;
+},{}],"js/mobileMenu.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var mobileMenu = function mobileMenu() {
+  var menuContainer = document.querySelector(".mobile-menu");
+  var menu = document.querySelector(".mobile-menu__toggle");
+  var menuLink = document.querySelectorAll(".mobile-menu__link");
+  menu.addEventListener("click", function () {
+    menuContainer.classList.toggle("change");
+  });
+  menuLink.forEach(function (link) {
+    link.addEventListener("click", function () {
+      menuContainer.classList.remove("change");
+    });
+  });
+};
+
+var _default = mobileMenu;
+exports.default = _default;
 },{}],"js/validateEmail.js":[function(require,module,exports) {
 "use strict";
 
@@ -216,12 +240,15 @@ var _aos = _interopRequireDefault(require("aos"));
 
 var _preloader = _interopRequireDefault(require("./preloader.js"));
 
+var _mobileMenu = _interopRequireDefault(require("./mobileMenu.js"));
+
 var _validateEmail = _interopRequireDefault(require("./validateEmail.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var init = function init() {
   (0, _preloader.default)();
+  (0, _mobileMenu.default)();
   (0, _validateEmail.default)();
 
   _aos.default.init({
@@ -232,7 +259,7 @@ var init = function init() {
 };
 
 window.addEventListener("DOMContentLoaded", init);
-},{"aos":"../node_modules/aos/dist/aos.js","./preloader.js":"js/preloader.js","./validateEmail.js":"js/validateEmail.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"aos":"../node_modules/aos/dist/aos.js","./preloader.js":"js/preloader.js","./mobileMenu.js":"js/mobileMenu.js","./validateEmail.js":"js/validateEmail.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

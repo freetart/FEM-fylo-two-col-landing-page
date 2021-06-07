@@ -1,0 +1,118 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.mobile-menu {
+  @include flexCenter;
+  width: 5.5rem;
+  height: 5.5rem;
+  background-color: $opacityBG;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  z-index: 3000;
+  display: none;
+
+  @include responsive(lg) {
+    display: flex;
+  }
+
+  &__content {
+    @include flexCenter;
+  }
+
+  &__toggle {
+    z-index: 3000;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      .line {
+        background-color: color(brightBlue);
+      }
+    }
+  }
+
+  &__list {
+    @include flexCenter;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s;
+  }
+
+  .change &__list {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__item {
+    margin: 2rem 0;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    color: color(white);
+    transition: letter-spacing 0.2s;
+    outline: 0;
+
+    &:hover,
+    &:focus {
+      letter-spacing: 0.8rem;
+    }
+  }
+}
+
+.line {
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: color(white);
+  margin: 0.5rem 0;
+  transform-origin: right;
+  transition: $mainTransition;
+}
+
+.change .line--1 {
+  transform: rotate(-40deg) translateY(-2px);
+}
+.change .line--2 {
+  opacity: 0;
+}
+.change .line--3 {
+  transform: rotate(40deg) translateY(1px);
+}
+
+.bg-cover {
+  width: 4.5rem;
+  height: 4.5rem;
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 100;
+  border-radius: 50%;
+  transition: transform 0.5s;
+  pointer-events: none;
+
+  @include responsive(lg) {
+    background-color: $opacityBG;
+  }
+
+  .change & {
+    transform: scale(150);
+  }
+}

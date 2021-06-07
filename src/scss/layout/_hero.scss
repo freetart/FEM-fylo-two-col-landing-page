@@ -6,6 +6,7 @@
 
   @include responsive(lg) {
     height: auto;
+    padding-top: 5rem;
   }
 
   &__heading {
