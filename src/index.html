@@ -11,6 +11,7 @@
     <title>Frontend Mentor Fylo Two Column Landing Page</title>
   </head>
   <body>
+    <!-- TODO: add hamburger menu | add glide.js -->
     <!-- preloader -->
     <div class="preloader">
       <div class="preloader__content">
@@ -54,16 +55,21 @@
             them wherever you need, share and collaborate with friends, family,
             and co-workers.
           </p>
-          <div class="cta cta--hero">
-            <input
-              type="text"
-              placeholder="Enter your email..."
-              class="cta__input"
-            />
+          <form class="cta cta--hero">
+            <div class="cta__input-container">
+              <input
+                type="text"
+                placeholder="Enter your email..."
+                class="cta__input"
+              />
+              <i class="fas fa-exclamation-circle fa-fw cta__error"></i>
+              <i class="fas fa-check-circle fa-fw cta__success"></i>
+              <small class="cta__message">Hello</small>
+            </div>
             <button type="submit" class="btn btn--primary btn--primary--hero">
               Get Started
             </button>
-          </div>
+          </form>
         </div>
         <div class="hero__img" data-aos="fade-up">
           <img
@@ -142,16 +148,21 @@
               would be happy to help you.
             </p>
           </div>
-          <div class="cta cta--banner" data-aos="fade-left">
-            <input
-              type="text"
-              placeholder="Enter your email..."
-              class="cta__input"
-            />
+          <form class="cta cta--banner" data-aos="fade-left">
+            <div class="cta__input-container">
+              <input
+                type="text"
+                placeholder="Enter your email..."
+                class="cta__input"
+              />
+              <i class="fas fa-exclamation-circle fa-fw cta__error"></i>
+              <i class="fas fa-check-circle fa-fw cta__success"></i>
+              <small class="cta__message">Hello</small>
+            </div>
             <button type="submit" class="btn btn--primary btn--primary--banner">
               Get Started For Free
             </button>
-          </div>
+          </form>
         </div>
       </section>
     </main>

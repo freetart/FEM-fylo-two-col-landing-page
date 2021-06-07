@@ -137,6 +137,78 @@ var preloader = function preloader() {
 
 var _default = preloader;
 exports.default = _default;
+},{}],"js/validateEmail.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var validateEmail = function validateEmail() {
+  var formHero = document.querySelector(".cta--hero");
+  var emailInputHero = document.querySelector(".cta--hero .cta__input");
+  var formBanner = document.querySelector(".cta--banner");
+  var emailInputBanner = document.querySelector(".cta--banner .cta__input"); // check hero input
+
+  var checkInputHero = function checkInputHero() {
+    var emailValueHero = emailInputHero.value.trim();
+
+    if (emailValueHero === "") {
+      setErrorMsg(emailInputHero, "Email cannot be blank");
+    } else if (!isEmail(emailValueHero)) {
+      setErrorMsg(emailInputHero, "Email is not valid");
+    } else {
+      setSuccess(emailInputHero);
+    }
+  }; // check banner input
+
+
+  var checkInputBanner = function checkInputBanner() {
+    var emailValueBanner = emailInputBanner.value.trim();
+
+    if (emailValueBanner === "") {
+      setErrorMsg(emailInputBanner, "Email cannot be blank");
+    } else if (!isEmail(emailValueBanner)) {
+      setErrorMsg(emailInputBanner, "Email is not valid");
+    } else {
+      setSuccess(emailInputBanner);
+    }
+  }; // error message
+
+
+  var setErrorMsg = function setErrorMsg(input, message) {
+    var inputGroup = input.parentElement.parentElement;
+    var errorMessage = inputGroup.querySelector(".cta__message");
+    errorMessage.innerText = message;
+    inputGroup.classList.remove("success");
+    inputGroup.classList.add("error");
+  };
+
+  var setSuccess = function setSuccess(input) {
+    var inputGroup = input.parentElement.parentElement;
+    inputGroup.classList.remove("error");
+    inputGroup.classList.add("success");
+  }; // check if valid email
+
+
+  var isEmail = function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+  }; // submit form
+
+
+  formHero.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkInputHero();
+  });
+  formBanner.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkInputBanner();
+  });
+};
+
+var _default = validateEmail;
+exports.default = _default;
 },{}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
@@ -144,10 +216,13 @@ var _aos = _interopRequireDefault(require("aos"));
 
 var _preloader = _interopRequireDefault(require("./preloader.js"));
 
+var _validateEmail = _interopRequireDefault(require("./validateEmail.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var init = function init() {
   (0, _preloader.default)();
+  (0, _validateEmail.default)();
 
   _aos.default.init({
     offset: 100,
@@ -157,7 +232,7 @@ var init = function init() {
 };
 
 window.addEventListener("DOMContentLoaded", init);
-},{"aos":"../node_modules/aos/dist/aos.js","./preloader.js":"js/preloader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"aos":"../node_modules/aos/dist/aos.js","./preloader.js":"js/preloader.js","./validateEmail.js":"js/validateEmail.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -185,7 +260,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63508" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64240" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

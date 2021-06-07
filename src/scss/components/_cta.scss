@@ -2,11 +2,50 @@
 @use "../abstracts/abstracts" as *;
 
 .cta {
+  &.error {
+    .cta__input {
+      border: 0.1rem solid color(softRed);
+    }
+
+    .cta__error {
+      display: block;
+      visibility: visible;
+    }
+
+    .cta__message {
+      display: block;
+    }
+
+    .cta__success {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  &.success {
+    .cta__input {
+      border: 0.1rem solid color(softGreen);
+    }
+
+    .cta__success {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    .cta__message {
+      display: none;
+    }
+
+    .cta__error {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
   &__input {
     @include textStyles;
     padding: $inputPadding;
     border-radius: $radius;
-
     transition: $mainTransition;
     border: 0.2rem solid color(lightGray);
     outline: 0;
@@ -25,10 +64,55 @@
     }
   }
 
+  &__input-container {
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    margin-right: 2rem;
+
+    @include responsive(lg) {
+      width: 100%;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    font-size: size(xxs);
+    color: color(softRed);
+    display: none;
+    visibility: hidden;
+  }
+
+  &__success {
+    @extend .cta__error;
+    color: color(softGreen);
+    display: none;
+    visibility: hidden;
+  }
+
+  &__message {
+    @include textStyles;
+    font-size: size(xxs) - 0.1rem;
+    position: absolute;
+    top: 5.5rem;
+    left: 1rem;
+    color: color(softRed);
+    display: none;
+  }
+
   &--hero {
-    .cta__input {
+    .cta__input-container {
       width: 50%;
-      margin-right: 2rem;
+
+      @include responsive(sm) {
+        width: 100%;
+      }
+    }
+
+    .cta__input {
+      width: 100%;
 
       @include responsive(sm) {
         width: 100%;
@@ -37,6 +121,10 @@
   }
 
   &--banner {
+    .cta__input-container {
+      width: 100%;
+    }
+
     .cta__input {
       width: 100%;
       margin-bottom: 3rem;

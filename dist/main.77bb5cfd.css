@@ -96,6 +96,34 @@ input {
   border: 0.2rem solid #4978f8;
 }
 
+.cta.error .cta__input {
+  border: 0.1rem solid #f96262;
+}
+.cta.error .cta__error, .cta.error .cta__success {
+  display: block;
+  visibility: visible;
+}
+.cta.error .cta__message {
+  display: block;
+}
+.cta.error .cta__success {
+  display: none;
+  visibility: hidden;
+}
+.cta.success .cta__input {
+  border: 0.1rem solid #00b300;
+}
+.cta.success .cta__success {
+  display: block !important;
+  visibility: visible !important;
+}
+.cta.success .cta__message {
+  display: none;
+}
+.cta.success .cta__error, .cta.success .cta__success {
+  display: none;
+  visibility: hidden;
+}
 .cta__input {
   font-weight: 400;
   letter-spacing: 0.1rem;
@@ -115,14 +143,60 @@ input {
 .cta__input:hover, .cta__input:focus {
   border: 0.2rem solid #93affb;
 }
-.cta--hero .cta__input {
+.cta__input-container {
   width: 50%;
+  position: relative;
+  display: inline-block;
   margin-right: 2rem;
+}
+@media (max-width: 1070px) {
+  .cta__input-container {
+    width: 100%;
+  }
+}
+.cta__error, .cta__success {
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+  font-size: 1.3rem;
+  color: #f96262;
+  display: none;
+  visibility: hidden;
+}
+.cta__success {
+  color: #00b300;
+  display: none;
+  visibility: hidden;
+}
+.cta__message {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 5.5rem;
+  left: 1rem;
+  color: #f96262;
+  display: none;
+}
+.cta--hero .cta__input-container {
+  width: 50%;
+}
+@media (max-width: 550px) {
+  .cta--hero .cta__input-container {
+    width: 100%;
+  }
+}
+.cta--hero .cta__input {
+  width: 100%;
 }
 @media (max-width: 550px) {
   .cta--hero .cta__input {
     width: 100%;
   }
+}
+.cta--banner .cta__input-container {
+  width: 100%;
 }
 .cta--banner .cta__input {
   width: 100%;
