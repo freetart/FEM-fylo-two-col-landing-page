@@ -8,4 +8,8 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 5rem;
+
+  &--banner {
+    gap: 20rem;
+  }
 }

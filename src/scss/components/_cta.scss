@@ -6,11 +6,10 @@
     @include textStyles;
     padding: $inputPadding;
     border-radius: $radius;
-    width: 50%;
-    margin-right: 2rem;
+
+    transition: $mainTransition;
     border: 0.2rem solid color(lightGray);
     outline: 0;
-    transition: $mainTransition;
 
     &::placeholder {
       color: color(lightGray);
@@ -23,6 +22,21 @@
     &:hover,
     &:focus {
       border: 0.2rem solid lighten(color(brightBlue), 20%);
+    }
+  }
+
+  &--hero {
+    .cta__input {
+      width: 50%;
+      margin-right: 2rem;
+    }
+  }
+
+  &--banner {
+    .cta__input {
+      width: 100%;
+      margin-bottom: 3rem;
+      box-shadow: $mainShadow;
     }
   }
 }

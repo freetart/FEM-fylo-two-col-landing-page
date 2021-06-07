@@ -1,0 +1,19 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.banner {
+  @include sectionSpacing;
+  background-color: color(desaturatedBlue);
+  color: color(white);
+
+  &__heading {
+    @include headingStyles;
+    font-size: size(xxl);
+    padding-bottom: 1rem;
+  }
+
+  &__desc {
+    @include textStyles;
+    font-size: size(xs);
+  }
+}
