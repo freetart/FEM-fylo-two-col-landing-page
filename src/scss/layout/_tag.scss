@@ -10,7 +10,7 @@
 
   &__heading {
     @include textStyles;
-    font-size: size(xs);
+    font-size: size(xs) - 0.1rem;
     color: color(white);
   }
 

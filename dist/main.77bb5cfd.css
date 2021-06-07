@@ -19,6 +19,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -720,7 +721,7 @@ input {
   font-weight: 400;
   letter-spacing: 0.1rem;
   line-height: 1.6;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: white;
 }
 .tag__link {
