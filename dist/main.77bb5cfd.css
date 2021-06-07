@@ -532,6 +532,7 @@ input {
 
 .hero {
   height: 80vh;
+  overflow: hidden;
 }
 @media (max-width: 1070px) {
   .hero {
@@ -600,6 +601,7 @@ input {
 
 .features {
   height: 80vh;
+  overflow: hidden;
 }
 @media (max-width: 1070px) {
   .features {
@@ -624,6 +626,7 @@ input {
 
 .banner {
   padding: 5rem 2rem;
+  overflow: hidden;
   background-color: #585989;
   color: white;
 }

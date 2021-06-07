@@ -3,6 +3,7 @@
 
 .banner {
   @include sectionSpacing;
+  overflow: hidden;
   background-color: color(desaturatedBlue);
   color: color(white);
 

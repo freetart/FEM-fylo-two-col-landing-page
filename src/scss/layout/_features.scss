@@ -3,6 +3,7 @@
 
 .features {
   height: 80vh;
+  overflow: hidden;
 
   @include responsive(lg) {
     height: auto;
