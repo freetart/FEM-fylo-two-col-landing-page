@@ -29,6 +29,10 @@
     .cta__input {
       width: 50%;
       margin-right: 2rem;
+
+      @include responsive(sm) {
+        width: 100%;
+      }
     }
   }
 

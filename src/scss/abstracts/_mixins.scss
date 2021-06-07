@@ -39,3 +39,30 @@
   max-width: 1000px;
   margin: 0 auto;
 }
+
+// media queries
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == lg) {
+    @media (max-width: 1070px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == md) {
+    @media (max-width: 850px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == sm) {
+    @media (max-width: 550px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == xs) {
+    @media (max-width: 350px) {
+      @content;
+    }
+  }
+}

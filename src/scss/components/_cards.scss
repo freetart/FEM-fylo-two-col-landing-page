@@ -7,6 +7,10 @@
   border-radius: $radius;
   box-shadow: $mainShadow;
 
+  @include responsive(md) {
+    width: 100%;
+  }
+
   &__content {
     padding: 3rem;
   }

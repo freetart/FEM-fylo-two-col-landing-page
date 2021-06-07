@@ -9,8 +9,16 @@
   align-items: center;
   gap: 5rem;
 
+  @include responsive(md) {
+    grid-template-columns: 1fr;
+  }
+
   &--banner {
     gap: 20rem;
+
+    @include responsive(md) {
+      gap: 10rem;
+    }
   }
 }
 
@@ -18,4 +26,12 @@
   @extend .two-col;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 2rem;
+
+  @include responsive(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include responsive(md) {
+    grid-template-columns: 1fr;
+  }
 }

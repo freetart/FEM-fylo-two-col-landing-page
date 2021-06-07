@@ -8,10 +8,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__logo {
     width: 15rem;
+
+    @include responsive(sm) {
+      margin: 0 1rem 1rem 0;
+    }
   }
 
   &__list {
@@ -21,6 +26,10 @@
 
   &__item {
     margin: 0 2rem;
+
+    &:nth-child(1) {
+      margin: 0 2rem 0 0;
+    }
   }
 
   &__link {

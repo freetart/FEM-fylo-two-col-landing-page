@@ -4,6 +4,10 @@
 .hero {
   height: 80vh;
 
+  @include responsive(md) {
+    height: auto;
+  }
+
   &__heading {
     @include headingStyles;
     color: color(veryDarkBlue);

@@ -11,6 +11,11 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@media (max-width: 350px) {
+  html {
+    font-size: 55.5%;
+  }
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -62,14 +67,29 @@ input {
   outline: 0;
   box-shadow: 0.1rem 0.3rem 1rem rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 550px) {
+  .btn {
+    width: 100%;
+  }
+}
 .btn--primary {
   background-color: #3065f8;
   color: white;
   border: 0.2rem solid #3065f8;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 550px) {
+  .btn--primary--hero {
+    margin-top: 3rem;
+  }
+}
 .btn--primary--banner {
   width: 40%;
+}
+@media (max-width: 550px) {
+  .btn--primary--banner {
+    width: 100%;
+  }
 }
 .btn--primary:hover, .btn--primary:focus {
   background-color: #4978f8;
@@ -98,6 +118,11 @@ input {
 .cta--hero .cta__input {
   width: 50%;
   margin-right: 2rem;
+}
+@media (max-width: 550px) {
+  .cta--hero .cta__input {
+    width: 100%;
+  }
 }
 .cta--banner .cta__input {
   width: 100%;
@@ -148,6 +173,11 @@ input {
   border-radius: 0.2rem;
   box-shadow: 0.1rem 0.3rem 1rem rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 850px) {
+  .quote {
+    width: 100%;
+  }
+}
 .quote__content {
   padding: 3rem;
 }
@@ -191,9 +221,15 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .nav__logo {
   width: 15rem;
+}
+@media (max-width: 550px) {
+  .nav__logo {
+    margin: 0 1rem 1rem 0;
+  }
 }
 .nav__list {
   display: flex;
@@ -201,6 +237,9 @@ input {
 }
 .nav__item {
   margin: 0 2rem;
+}
+.nav__item:nth-child(1) {
+  margin: 0 2rem 0 0;
 }
 .nav__link {
   font-weight: 400;
@@ -215,6 +254,11 @@ input {
 
 .hero {
   height: 80vh;
+}
+@media (max-width: 850px) {
+  .hero {
+    height: auto;
+  }
 }
 .hero__heading {
   font-family: "Raleway", sans-serif;
@@ -241,17 +285,42 @@ input {
   align-items: center;
   gap: 5rem;
 }
+@media (max-width: 850px) {
+  .two-col, .four-col {
+    grid-template-columns: 1fr;
+  }
+}
 .two-col--banner {
   gap: 20rem;
+}
+@media (max-width: 850px) {
+  .two-col--banner {
+    gap: 10rem;
+  }
 }
 
 .four-col {
   grid-template-columns: repeat(4, 1fr);
   margin-top: 2rem;
 }
+@media (max-width: 1070px) {
+  .four-col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 850px) {
+  .four-col {
+    grid-template-columns: 1fr;
+  }
+}
 
 .features {
   height: 80vh;
+}
+@media (max-width: 850px) {
+  .features {
+    height: auto;
+  }
 }
 .features__heading {
   font-family: "Raleway", sans-serif;
@@ -323,7 +392,7 @@ input {
   letter-spacing: 0.1rem;
   line-height: 1.6;
   color: white;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin: 2rem 0;
 }
 .footer__item {
@@ -334,7 +403,7 @@ input {
   letter-spacing: 0.1rem;
   line-height: 1.6;
   color: white;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   transition: all 0.3s ease-in-out;
 }
 .footer__link:hover, .footer__link:focus {
@@ -345,6 +414,11 @@ input {
   font-size: 3rem;
   margin: 0 1.5rem;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1070px) {
+  .footer__social {
+    margin: 0 1.5rem 0 0;
+  }
 }
 .footer__social:hover, .footer__social:focus {
   color: #93affb;

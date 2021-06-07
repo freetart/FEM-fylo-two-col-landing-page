@@ -33,7 +33,7 @@
   &__contact {
     @include textStyles;
     color: color(white);
-    font-size: size(xs);
+    font-size: size(xxs) + 0.1rem;
     margin: 2rem 0;
   }
 
@@ -44,7 +44,7 @@
   &__link {
     @include textStyles;
     color: color(white);
-    font-size: size(xs);
+    font-size: size(xxs) + 0.1rem;
     transition: $mainTransition;
 
     &:hover,
@@ -58,6 +58,10 @@
     font-size: size(xl);
     margin: 0 1.5rem;
     transition: $mainTransition;
+
+    @include responsive(lg) {
+      margin: 0 1.5rem 0 0;
+    }
 
     &:hover,
     &:focus {

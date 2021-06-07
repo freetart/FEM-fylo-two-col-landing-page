@@ -9,14 +9,28 @@
   outline: 0;
   box-shadow: $mainShadow;
 
+  @include responsive(sm) {
+    width: 100%;
+  }
+
   &--primary {
     background-color: color(brightBlue);
     color: color(white);
     border: 0.2rem solid color(brightBlue);
     transition: $mainTransition;
 
+    &--hero {
+      @include responsive(sm) {
+        margin-top: 3rem;
+      }
+    }
+
     &--banner {
       width: 40%;
+
+      @include responsive(sm) {
+        width: 100%;
+      }
     }
 
     &:hover,
