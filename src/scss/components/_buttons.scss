@@ -1,0 +1,23 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.btn {
+  @include headingStyles;
+  padding: $btnPadding;
+  border-radius: $radius;
+  width: 30%;
+  outline: 0;
+
+  &--primary {
+    background-color: color(brightBlue);
+    color: color(white);
+    border: 0.2rem solid color(brightBlue);
+    transition: $mainTransition;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(color(brightBlue), 5%);
+      border: 0.2rem solid lighten(color(brightBlue), 5%);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.cta {
+  &__input {
+    @include textStyles;
+    padding: $inputPadding;
+    border-radius: $radius;
+    width: 50%;
+    margin-right: 2rem;
+    border: 0.2rem solid color(lightGray);
+    outline: 0;
+    transition: $mainTransition;
+
+    &::placeholder {
+      color: color(lightGray);
+    }
+
+    &:-ms-input-placeholder {
+      color: color(lightGray);
+    }
+
+    &:hover,
+    &:focus {
+      border: 0.2rem solid lighten(color(brightBlue), 20%);
+    }
+  }
+}
