@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- aos -->
     <link rel="stylesheet" href="/aos.2132f706.css">
+    <!-- glidejs -->
+    <link rel="stylesheet" href="/glide.core.min.6db1f6b7.css">
     <link rel="shortcut icon" href="/koala.b3769ada.ico">
     <link rel="stylesheet" href="/main.77bb5cfd.css">
     <title>Frontend Mentor Fylo Two Column Landing Page</title>
-  <script src="/aos.2132f706.js"></script><script src="/main.77bb5cfd.js"></script></head>
+  <script src="/aos.2132f706.js"></script><script src="/glide.core.min.6db1f6b7.js"></script><script src="/main.77bb5cfd.js"></script></head>
   <body>
-    <!-- TODO: add glide.js | add dynamic content -->
+    <!-- TODO: add dynamic content -->
     <!-- preloader -->
     <div class="preloader">
       <div class="preloader__content">
@@ -113,26 +115,75 @@
             <div class="fancy-link">
               <a href="#!" class="fancy-link__text"> See how Fylo works</a>
             </div>
-            <!-- quote -->
-            <article class="quote">
-              <div class="quote__content">
-                <img src="/icon-quotes.7bba01ec.svg" alt="quote icon" class="quote__icon">
-                <blockquote>
-                  <p class="quote__desc">
-                    Fylo has improved our team productivity by an order of
-                    magnitude. Since making the switch our team has become a
-                    well-oiled collaboration machine.
-                  </p>
-                </blockquote>
-                <div class="quote__user">
-                  <img src="/avatar-testimonial.d6ab248b.jpg" alt="quote avatar" class="quote__avatar">
-                  <div class="quote__user-info">
-                    <h4 class="quote__username">Kyle Burton</h4>
-                    <p class="quote__pos">Founder & CEO, Huddle</p>
-                  </div>
-                </div>
+            <!-- quotes -->
+            <div class="glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <!-- single quote -->
+                  <li class="glide__slide quote">
+                    <div class="quote__content">
+                      <img src="/icon-quotes.7bba01ec.svg" alt="quote icon" class="quote__icon">
+                      <blockquote>
+                        <p class="quote__desc">
+                          Fylo has improved our team productivity by an order of
+                          magnitude. Since making the switch our team has become
+                          a well-oiled collaboration machine.
+                        </p>
+                      </blockquote>
+                      <div class="quote__user">
+                        <img src="/avatar-testimonial.d6ab248b.jpg" alt="quote avatar" class="quote__avatar">
+                        <div class="quote__user-info">
+                          <h4 class="quote__username">Kyle Burton</h4>
+                          <p class="quote__pos">Founder & CEO, Huddle</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- single quote -->
+                  <li class="glide__slide quote">
+                    <div class="quote__content">
+                      <img src="/icon-quotes.7bba01ec.svg" alt="quote icon" class="quote__icon">
+                      <blockquote>
+                        <p class="quote__desc">
+                          "Customer service is always excellent and very quick
+                          turn around. Completely delighted with the simplicity
+                          of the purchase and the speed of delivery."
+                        </p>
+                      </blockquote>
+                      <div class="quote__user">
+                        <img src="/avatar-testimonial.d6ab248b.jpg" alt="quote avatar" class="quote__avatar">
+                        <div class="quote__user-info">
+                          <h4 class="quote__username">Kyle Burton</h4>
+                          <p class="quote__pos">CTO, Habibtech</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- single quote -->
+                  <li class="glide__slide quote">
+                    <div class="quote__content">
+                      <img src="/icon-quotes.7bba01ec.svg" alt="quote icon" class="quote__icon">
+                      <blockquote>
+                        <p class="quote__desc">
+                          "Put an order with this company and can only praise
+                          them for the very high standard. Will definitely use
+                          them again and recommend them to everyone!"
+                        </p>
+                      </blockquote>
+                      <div class="quote__user">
+                        <img src="/avatar-testimonial.d6ab248b.jpg" alt="quote avatar" class="quote__avatar">
+                        <div class="quote__user-info">
+                          <h4 class="quote__username">Kyle Burton</h4>
+                          <p class="quote__pos">
+                            Chief Executive, Beeb Solutions
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </article>
+            </div>
           </div>
           <div class="features__img" data-aos="fade-up">
             <img src="/illustration-2.8dd574a6.svg" alt="fylo illustration" class="features__illustration">
@@ -241,6 +292,8 @@
 
     <!-- aos -->
     <script src="/aos.a97d3008.js"></script>
+    <!-- glidejs -->
+    <script src="/glide.483e68ef.js"></script>
     <!-- font awesome -->
     <script src="/brands.min.4b2def18.js"></script>
     <script src="/solid.min.eaeaa39f.js"></script>
