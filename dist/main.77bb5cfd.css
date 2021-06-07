@@ -68,6 +68,9 @@ input {
   border: 0.2rem solid #3065f8;
   transition: all 0.3s ease-in-out;
 }
+.btn--primary--banner {
+  width: 40%;
+}
 .btn--primary:hover, .btn--primary:focus {
   background-color: #4978f8;
   border: 0.2rem solid #4978f8;
@@ -229,7 +232,7 @@ input {
   padding: 1.5rem 0 2rem 0;
 }
 
-.two-col {
+.two-col, .four-col {
   max-width: 1400px;
   margin: 0 auto;
   padding: 5rem 2rem;
@@ -240,6 +243,11 @@ input {
 }
 .two-col--banner {
   gap: 20rem;
+}
+
+.four-col {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
 }
 
 .features {
@@ -279,6 +287,67 @@ input {
   letter-spacing: 0.1rem;
   line-height: 1.6;
   font-size: 1.6rem;
+}
+
+.footer {
+  background-color: #070439;
+  position: relative;
+}
+.footer__content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.footer__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  transform: translateY(-7rem);
+  margin: 1rem;
+}
+.footer__logo {
+  width: 7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer__contact {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: white;
+  font-size: 1.6rem;
+  margin: 2rem 0;
+}
+.footer__item {
+  margin: 1.5rem 0;
+}
+.footer__link {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: white;
+  font-size: 1.6rem;
+  transition: all 0.3s ease-in-out;
+}
+.footer__link:hover, .footer__link:focus {
+  color: #93affb;
+}
+.footer__social {
+  color: white;
+  font-size: 3rem;
+  margin: 0 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.footer__social:hover, .footer__social:focus {
+  color: #93affb;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

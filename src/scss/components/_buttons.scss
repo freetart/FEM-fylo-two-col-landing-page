@@ -15,6 +15,10 @@
     border: 0.2rem solid color(brightBlue);
     transition: $mainTransition;
 
+    &--banner {
+      width: 40%;
+    }
+
     &:hover,
     &:focus {
       background-color: lighten(color(brightBlue), 5%);

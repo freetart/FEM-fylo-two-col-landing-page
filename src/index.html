@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome -->
+    <script
+      defer
+      src="../node_modules/@fortawesome/fontawesome-free/js/brands.min.js"
+    ></script>
+    <script
+      defer
+      src="../node_modules/@fortawesome/fontawesome-free/js/solid.min.js"
+    ></script>
+    <script
+      defer
+      src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"
+    ></script>
     <link rel="shortcut icon" href="./images/favicon/koala.ico" />
     <link rel="stylesheet" href="./scss/main.scss" />
     <title>Frontend Mentor Fylo Two Column Landing Page</title>
@@ -133,11 +146,73 @@
               placeholder="Enter your email..."
               class="cta__input"
             />
-            <button type="submit" class="btn btn--primary">Get Started</button>
+            <button type="submit" class="btn btn--primary btn--primary--banner">
+              Get Started For Free
+            </button>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__circle">
+          <img src="./images/logo.svg" alt="fylo logo" class="footer__logo" />
+        </div>
+        <div class="four-col">
+          <!-- single col -->
+          <div class="footer__col">
+            <p class="footer__contact">
+              <i class="fas fa-phone fa-fw"></i>
+              Phone: +1-543-123-4567
+            </p>
+            <p class="footer__contact">
+              <i class="fas fa-envelope fa-fw"></i>
+              example@fylo.com
+            </p>
+          </div>
+          <!-- single col -->
+          <ul class="footer__col">
+            <li class="footer__item">
+              <a href="#!" class="footer__link">About Us</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Jobs</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Press</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Blog</a>
+            </li>
+          </ul>
+          <!-- single col -->
+          <ul class="footer__col">
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Contact Us</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Terms</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Privacy</a>
+            </li>
+          </ul>
+          <div class="footer__col">
+            <a href="#!" class="footer__social">
+              <i class="fab fa-facebook-f fa-fw"></i>
+            </a>
+            <a href="#!" class="footer__social">
+              <i class="fab fa-twitter fa-fw"></i>
+            </a>
+            <a href="#!" class="footer__social">
+              <i class="fab fa-instagram fa-fw"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./js/main.js"></script>
   </body>
 </html>

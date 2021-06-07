@@ -13,3 +13,9 @@
     gap: 20rem;
   }
 }
+
+.four-col {
+  @extend .two-col;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
+}
