@@ -1,10 +1,9 @@
-"use scrict";
+import AOS from "aos";
+import preloader from "./preloader.js";
 
-const preloader = () => {
-  const preloaderEl = document.querySelector(".preloader");
-
-  window.addEventListener("load", function () {
-    preloaderEl.classList.add("hide-preloader");
-  });
+const init = () => {
+  preloader();
+  AOS.init({ offset: 100, duration: 1000, once: true });
 };
-preloader();
+
+window.addEventListener("DOMContentLoaded", init);

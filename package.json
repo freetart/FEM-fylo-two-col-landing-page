@@ -11,7 +11,8 @@
   "author": "Chris M. (habibdev)",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "aos": "^2.3.4"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
