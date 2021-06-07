@@ -1,18 +1,18 @@
 // imports
 @use "../abstracts/abstracts" as *;
 
-.hero {
+.features {
   height: 80vh;
 
   &__heading {
     @include headingStyles;
     color: color(veryDarkBlue);
-    font-size: size(xxl) + 0.5rem;
+    font-size: size(xxl);
   }
 
   &__desc {
     @include textStyles;
-    font-size: size(sm);
-    padding: 1.5rem 0 2rem 0;
+    font-size: size(xs);
+    padding: 1rem 0;
   }
 }

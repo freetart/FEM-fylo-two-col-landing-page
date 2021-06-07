@@ -1,0 +1,44 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.quote {
+  margin-top: 5rem;
+  width: 60%;
+  border-radius: $radius;
+  box-shadow: $mainShadow;
+
+  &__content {
+    padding: 3rem;
+  }
+
+  &__icon {
+    width: 2rem;
+  }
+
+  &__desc {
+    @include textStyles;
+    font-size: size(xxs) + 0.1rem;
+    padding: 1rem 0;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  &__username {
+    @include headingStyles;
+    font-size: size(xxs) - 0.1rem;
+  }
+
+  &__pos {
+    @include textStyles;
+    font-size: size(xxs) - 0.2rem;
+  }
+}

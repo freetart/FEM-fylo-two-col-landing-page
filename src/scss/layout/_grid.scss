@@ -1,0 +1,11 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.two-col {
+  @include maxWidthLg;
+  @include sectionSpacing;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 5rem;
+}
