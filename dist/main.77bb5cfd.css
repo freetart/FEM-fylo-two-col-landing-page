@@ -525,14 +525,8 @@ input {
 }
 
 .hero {
-  height: 80vh;
   overflow: hidden;
-}
-@media (max-width: 1070px) {
-  .hero {
-    height: auto;
-    padding-top: 5rem;
-  }
+  padding: 5rem 0;
 }
 .hero__heading {
   font-family: "Raleway", sans-serif;
@@ -594,13 +588,9 @@ input {
 }
 
 .features {
-  height: 80vh;
+  padding: 5rem 0;
   overflow: hidden;
-}
-@media (max-width: 1070px) {
-  .features {
-    height: auto;
-  }
+  background-color: #f6f6fe;
 }
 .features__heading {
   font-family: "Raleway", sans-serif;
@@ -642,6 +632,12 @@ input {
 }
 .features .glide__slides:active {
   cursor: grabbing;
+}
+
+.bg-pattern {
+  margin-bottom: -10px;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .banner {

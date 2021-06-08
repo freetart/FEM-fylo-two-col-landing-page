@@ -2,12 +2,9 @@
 @use "../abstracts/abstracts" as *;
 
 .features {
-  height: 80vh;
+  padding: 5rem 0;
   overflow: hidden;
-
-  @include responsive(lg) {
-    height: auto;
-  }
+  background-color: color(lightGrayishBlue);
 
   &__heading {
     @include headingStyles;
@@ -50,4 +47,10 @@
       }
     }
   }
+}
+
+.bg-pattern {
+  margin-bottom: -10px;
+  z-index: -1;
+  pointer-events: none;
 }

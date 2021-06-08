@@ -2,13 +2,8 @@
 @use "../abstracts/abstracts" as *;
 
 .hero {
-  height: 80vh;
   overflow: hidden;
-
-  @include responsive(lg) {
-    height: auto;
-    padding-top: 5rem;
-  }
+  padding: 5rem 0;
 
   &__heading {
     @include headingStyles;
