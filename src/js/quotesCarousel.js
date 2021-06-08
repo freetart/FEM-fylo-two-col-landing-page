@@ -6,6 +6,7 @@ const quotesCarousel = () => {
     autoplay: 10000,
     perView: 1,
   };
+
   new Glide(".glide", quotesCarouselConfig).mount();
 };
 
