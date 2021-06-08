@@ -28,6 +28,17 @@
   .glide {
     margin-top: 5rem;
     width: 100%;
+    position: relative;
+
+    &__message {
+      @include headingStyles;
+      position: absolute;
+      top: 3rem;
+      right: 2rem;
+      font-size: size(xxs);
+      color: color(moderateCyan);
+      transform: rotate(30deg);
+    }
 
     &__slides {
       &:hover {
